@@ -24,7 +24,7 @@ def api_predict():
     data=request.get_json(force=True)
     email=data["content"]
     predictions= make_predictions(email)
-    return jsonify({prediction:prediction})
+    return jsonify({predictions:predictions})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
